@@ -1,0 +1,16 @@
+.nav-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 10% 90%;
+	background-color: #fff;
+	color: #444;
+}
+.nav-right {
+	text-align: right;
+}
+
+@media (max-width: 767.98px) {
+	.nav-wrapper {
+		font-size: 13.25px;
+	}
+}

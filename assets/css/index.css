@@ -1,0 +1,116 @@
+img {
+	border-radius: 50%;
+	width: 80%;
+	height: auto;
+	max-height: 100%;
+}
+
+i {
+	font-size: 22.5px;
+}
+
+.main-wrapper {
+	display: grid;
+	margin-top: 7.5%;
+	grid-gap: 10px;
+	grid-template-columns: auto 30% 50% auto;
+	grid-template-rows: repeat(2, [row] auto);
+	background-color: #fff;
+}
+
+.left-container {
+	grid-column: 2 / 3;
+	border-radius: 5px;
+	padding: 20px;
+
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 100%;
+	grid-template-rows: min-content 1fr;
+
+	text-align: center;
+}
+
+#role-location,
+#profile-picture-sm {
+	display: none;
+}
+
+.profile-picture {
+	grid-column: 1;
+	grid-row: 1;
+	border-radius: 5px;
+}
+.profile-info a {
+	grid-column: 1;
+	grid-row: 2;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 150%;
+}
+
+.right-container {
+	grid-column: 3 / 4;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 95%;
+}
+h2 {
+	font-size: 95%;
+}
+h3,
+table {
+	font-size: 95%;
+}
+
+@media (max-width: 767.98px) {
+	.main-wrapper {
+		grid-template-columns: 100%;
+		grid-gap: 0px;
+	}
+	body {
+		text-align: left;
+		padding: 15px;
+	}
+	img {
+		margin-top: 10px;
+		max-width: 75px;
+	}
+	.left-container {
+		display: none;
+	}
+	.right-container {
+		border-radius: 5px;
+		grid-column: 1;
+		column-gap: 0px;
+		padding: 0px;
+
+		display: grid;
+		grid-template-columns: 15% 85%;
+		grid-template-rows: min-content 1fr;
+	}
+	.timeOfDay,
+	.education,
+	.bio,
+	.projectHighlights,
+	.commits,
+	.languages {
+		grid-column: 1 / 3;
+	}
+
+	.name {
+		grid-column: 2 / 3;
+	}
+	#profile-picture-sm {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	#role-location,
+	#profile-picture-sm {
+		display: block;
+	}
+}
